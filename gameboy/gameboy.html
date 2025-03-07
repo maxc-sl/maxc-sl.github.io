@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Game Boy Advance SP</title>
+	<link rel="stylesheet" href="./css/gameboy.css">
+</head>
+<body>
+	<div class="system-container" id="gbasp">
+		<div class="screen-body">
+			<div class="screen-bumper" id="bumper-ul"></div>
+			<div class="screen-bumper" id="bumper-ur"></div>
+			<div class="screen-bumper small-bumper" id="bumper-tm"></div>
+			<div class="screen-bumper small-bumper" id="bumper-ll"></div>
+			<div class="screen-bumper small-bumper" id="bumper-lr"></div>
+			<div class="screen-border">
+				<div class="screen">
+					<canvas id="gameCanvas" width="320" height="240"></canvas>
+				</div>
+			</div>
+		</div>
+		<div class="swivel"> </div>
+		
+		<div class="gamepad-body">
+			<div class="power-light"></div>
+			<div class="power-light"></div>
+
+			<div class="pad-container dpad-container">
+				<div class="d-pad"></div>
+			</div>
+				
+			<div class="pad-container buttons-container"> 
+				<div class="b-button">
+					<span class="letter">B</span>
+				</div>
+				
+				<a href="#"><div class="a-button">
+					<span class="letter">A</span>
+				</div></a>
+				
+			</div>
+				
+			<div class="pad-container power-container">
+				<a href="#"><div class="b-button power-button"> 
+					</div></a>
+			</div>
+				<div class="speaker-holder">
+					<div class="dot small-dot"></div>
+					<div class="dot small-dot"></div>
+					<div class="dot small-dot"></div>
+					<div class="dot small-dot"></div>
+					<div class="dot small-dot"></div>
+					<div class="dot large-dot"></div>
+					<div class="dot large-dot"></div>
+					<div class="dot small-dot"></div>
+					<div class="dot small-dot"></div>
+					<div class="dot large-dot"></div>
+					<div class="dot large-dot"></div>
+					<div class="dot small-dot"></div>
+					<div class="dot small-dot"></div>
+					<div class="dot small-dot"></div>
+					<div class="dot small-dot"></div>
+					<div class="dot small-dot"></div>
+			</div>
+				
+			<div class="pad-container select-container">
+				<div class="a-button select-button"> </div>
+				</div>
+
+			<div class="pad-container start-container">
+					<div class="a-button start-button"> 
+				</div>
+				</div>
+			
+			<div class="select-label">SELECT</div>
+			<div class="select-label">SELECT</div>
+
+			<div class="start-label">START</div>
+			<div class="start-label">START</div>
+		</div>
+	</div>
+
+	<script src="./js/gameboy.js"></script>
+</body>
+</html>
