@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stellar Light Client</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Stellar Light Client</h1>
+            <div class="panel-controls">
+                <button id="panel-toggle-btn">hide panel</button>
+            </div>
+            <div id="connection-status">Disconnected</div>
+        </header>
+        
+        <main>
+            <div class="connection-panel">
+                <div class="form-group">
+                    <label for="host">Host:</label>
+                    <input type="text" id="host" value="localhost" data-persist="true">
+                </div>
+                <div class="form-group">
+                    <label for="port">Port:</label>
+                    <!-- 13345 is the port for the WebSocket server -->
+                    <input type="number" id="port" value="13345" data-persist="true">
+                </div>
+                <div class="form-group">
+                    <label for="user-id">User ID:</label>
+                    <input type="text" id="user-id" value="" data-persist="true">
+                </div>
+                <div class="form-group">
+                    <label for="user-address">IP Address:</label>
+                    <input type="text" id="user-address" value="" readonly>
+                </div>
+                <button id="connect-btn">Connect</button>
+                <button id="disconnect-btn" disabled>Disconnect</button>
+            </div>
+            
+            <div class="client-display">
+                <div class="log-container">
+                    <h3>Connection Log</h3>
+                    <div id="log-output"></div>
+                </div>
+                
+                <div class="input-container">
+                    <textarea id="message-input" placeholder="Type a message to send to the server"></textarea>
+                    <button id="send-btn" disabled>Send</button>
+                </div>
+            </div>
+        </main>
+        
+        <!-- Add game controller -->
+        <div class="game-controller">
+            <div class="direction-pad">
+                <button id="btn-w" class="control-btn direction-btn">W</button>
+                <div class="direction-middle">
+                    <button id="btn-a" class="control-btn direction-btn">A</button>
+                    <button id="btn-s" class="control-btn direction-btn">S</button>
+                    <button id="btn-d" class="control-btn direction-btn">D</button>
+                </div>
+            </div>
+            <div class="action-buttons">
+                <button id="btn-action-a" class="control-btn action-btn action-btn-a">A</button>
+                <button id="btn-action-b" class="control-btn action-btn action-btn-b">B</button>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Load scripts -->
+    <script src="js/msgpack.min.js"></script>
+    <script src="js/utils.js"></script>
+    <script src="js/networking.js"></script>
+    <script src="js/app.js"></script>
+</body>
+</html> 
